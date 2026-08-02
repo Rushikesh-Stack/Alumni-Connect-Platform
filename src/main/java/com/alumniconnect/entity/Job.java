@@ -20,11 +20,11 @@ public class Job {
     @Column(name = "job_id")
     private Long jobId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "alumni_user_id")
     private User alumni;
 
-    @Column(name = "job_title", nullable = false, length = 150)
+    @Column(name = "job_title", nullable = false, length = 100)
     private String jobTitle;
 
     @Column(name = "company", nullable = false, length = 100)
@@ -53,8 +53,8 @@ public class Job {
     private LocalDate lastDate;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "status")
-    private JobStatus status;
+    @Column(name = "status", nullable = false)
+    private JobStatus status = JobStatus.ACTIVE;
 
     @Column(name = "posted_at")
     private LocalDateTime postedAt;
