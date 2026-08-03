@@ -38,6 +38,9 @@ public class AlumniProfile {
     @Column(name = "industry", length = 100)
     private String industry;
 
+    @Column(name = "skills", columnDefinition = "TEXT")
+    private String skills;
+
     @Column(name = "location", length = 100)
     private String location;
 

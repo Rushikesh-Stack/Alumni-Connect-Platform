@@ -70,6 +70,7 @@ public class UserServiceImpl implements UserService {
 
         studentProfile.setGraduationYear(request.getGraduationYear());
         studentProfile.setInterests(request.getInterests());
+        studentProfile.setSkills(request.getSkills());
         studentProfile.setBio(request.getBio());
         studentProfile.setResumeUrl(request.getResumeUrl());
         studentProfile.setLinkedinUrl(request.getLinkedinUrl());
@@ -117,6 +118,7 @@ public class UserServiceImpl implements UserService {
         alumniProfile.setPosition(request.getPosition());
         alumniProfile.setExperienceYears(request.getExperienceYears());
         alumniProfile.setIndustry(request.getIndustry());
+        alumniProfile.setSkills(request.getSkills());
         alumniProfile.setLocation(request.getLocation());
         alumniProfile.setHigherEducation(request.getHigherEducation());
         alumniProfile.setAchievements(request.getAchievements());

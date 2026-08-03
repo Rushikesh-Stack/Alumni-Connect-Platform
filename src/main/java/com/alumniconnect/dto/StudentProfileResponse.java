@@ -5,14 +5,17 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class StudentRegistrationRequest {
+public class StudentProfileResponse {
+
+    private Long userId;
 
     private String fullName;
+
     private String email;
-    private String password;
+
     private String phoneNumber;
 
-    private Long departmentId;
+    private String department;
 
     private Integer graduationYear;
 

@@ -29,6 +29,9 @@ public class StudentProfile {
     @Column(name = "interests", length = 255)
     private String interests;
 
+    @Column(name = "skills", columnDefinition = "TEXT")
+    private String skills;
+
     @Column(name = "bio", columnDefinition = "TEXT")
     private String bio;
 
