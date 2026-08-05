@@ -4,6 +4,7 @@ import com.alumniconnect.entity.Job;
 import com.alumniconnect.enums.JobStatus;
 import com.alumniconnect.enums.JobType;
 import org.springframework.data.jpa.repository.JpaRepository;
+import com.alumniconnect.entity.User;
 
 import java.util.List;
 
@@ -16,5 +17,9 @@ public interface JobRepository extends JpaRepository<Job, Long> {
     List<Job> findByCompanyContainingIgnoreCase(String company);
 
     List<Job> findByLocationContainingIgnoreCase(String location);
+
+    long countByStatus(JobStatus status);
+
+    long countByAlumni(User alumni);
 
 }
